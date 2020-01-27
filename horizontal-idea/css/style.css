@@ -25,7 +25,6 @@
 
 html, body{
     height: 100%;
-    background: #222222;
 }
 
 .font-aliens {
@@ -61,6 +60,18 @@ html, body{
     font-size: 10em;
 }
 
+.m-l-200{
+    margin-left: 200px;
+}
+
+.m-l-350{
+    margin-left: 350px;
+}
+
+.m-t-60{
+    margin-top: 60px;
+}
+
 .name{
     margin-left: 30%;
 }
@@ -69,4 +80,9 @@ html, body{
     font-family: anders, serif;
     font-weight: normal;
     font-size: .5em;
+}
+
+.logo-background{
+    background-image: url("../img/logo-kulikowski.png");
+    height: 400px;
 }
