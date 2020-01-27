@@ -1,0 +1,72 @@
+@font-face {
+    font-family: aliens;
+    src: url(../assets/aliens.ttf);
+}
+
+@font-face {
+    font-family: fat;
+    src: url(../assets/bigjohn.otf);
+}
+
+@font-face {
+    font-family: slim;
+    src: url(../assets/slimjoe.otf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../assets/kelson.otf);
+}
+
+@font-face {
+    font-family: anders;
+    src: url(../assets/anders.ttf);
+}
+
+html, body{
+    height: 100%;
+    background: #222222;
+}
+
+.font-aliens {
+    font-family: aliens, serif;
+    font-weight: normal;
+}
+
+.letter-space-0_5 {
+    letter-spacing: .5em;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.scroll {
+    position: fixed;
+    left: 0;
+    height: 100%;
+}
+
+.background-text {
+    width: 2000px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-content: space-around;
+    font-size: 10em;
+}
+
+.name{
+    margin-left: 30%;
+}
+
+.portfolio{
+    font-family: anders, serif;
+    font-weight: normal;
+    font-size: .5em;
+}

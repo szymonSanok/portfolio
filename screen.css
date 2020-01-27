@@ -69,12 +69,19 @@ body{
     display: flex;
 }
 
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #fff;
+}
+
 nav ul{
     display: flex;
 }
 
 nav ul li{
-    margin: 10px 15px 60px 0;
+    margin: 10px 15px 5px 0;
 }
 
 .main {
