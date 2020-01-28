@@ -23,7 +23,11 @@
     src: url(../assets/anders.ttf);
 }
 
-html, body{
+html, body {
+    height: 100%;
+}
+
+.h-100 {
     height: 100%;
 }
 
@@ -40,8 +44,17 @@ html, body{
     display: flex;
 }
 
-.flex-direction-column{
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-direction-column {
     flex-direction: column;
+}
+
+.background-gradient {
+    background: rgb(30, 30, 30);
+    background: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(62, 62, 62, 1) 100%);
 }
 
 .scroll {
@@ -50,39 +63,131 @@ html, body{
     height: 100%;
 }
 
-.background-text {
-    width: 2000px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    align-content: space-around;
-    font-size: 10em;
+.font-size-_3 {
+    font-size: .3em;
+    font-weight: 100;
 }
 
-.m-l-200{
+.background-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10em;
+    color: #ffe08a;
+}
+
+.m-l-200 {
     margin-left: 200px;
 }
 
-.m-l-350{
+.m-l-350 {
     margin-left: 350px;
 }
 
-.m-t-60{
+.m-t-60 {
     margin-top: 60px;
 }
 
-.name{
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.name {
     margin-left: 30%;
 }
 
-.portfolio{
+.portfolio {
     font-family: anders, serif;
     font-weight: normal;
     font-size: .5em;
 }
 
-.logo-background{
-    background-image: url("../img/logo-kulikowski.png");
-    height: 400px;
+.logo-background {
+    background-image: url("../img/logo-kulikowski-gold.png");
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+
+.round-border {
+    border: #ffe08a dashed thin;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+}
+
+.centerize-arrow {
+    text-align: center;
+    line-height: 70px !important;
+}
+
+.move-up-down:hover {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: MoveUpDown 1s linear infinite;
+}
+
+.rotate-border{
+    animation: Rotate 10s linear infinite;
+    transform: rotate(180deg);
+}
+
+.rotate-rev{
+    animation: RotateRev 10s linear infinite;
+}
+
+@keyframes MoveUpDown {
+
+    0% {
+        top: 0;
+    }
+    10% {
+        top: 1px;
+    }
+    20% {
+        top: 2px;
+    }
+    30% {
+        top: 3px;
+    }
+    40% {
+        top: 4px;
+    }
+    50% {
+        top: 5px;
+    }
+    60% {
+        top: 4px;
+    }
+    70% {
+        top: 3px;
+    }
+    80% {
+        top: 2px;
+    }
+    90% {
+        top: 1px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes Rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes RotateRev {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
