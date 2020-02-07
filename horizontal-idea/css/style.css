@@ -69,9 +69,15 @@ html {
   flex-direction: column;
 }
 
-.fixed-top-left {
+.fixed-top-right {
   position: fixed;
   top: 0;
+  right: 0;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 0;
   right: 0;
 }
 
@@ -102,6 +108,7 @@ html {
   align-items: center;
   font-size: 10em;
   color: #ffe08a;
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
 }
 @media screen and (max-width: 1024px) {
   .background-text {
@@ -124,6 +131,14 @@ html {
   }
 }
 
+.arrow-font {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10em;
+  color: #ffe08a;
+}
+
 .m-l-200 {
   margin-left: 200px;
 }
@@ -144,16 +159,16 @@ html {
   margin-bottom: 30px;
 }
 
-.m-t-15 {
-  margin-top: 15px;
+.m-t-8 {
+  margin-top: 8px;
 }
 
 .m-t--30 {
   margin-top: -30px;
 }
 
-.m-r-15 {
-  margin-right: 15px;
+.m-r-8 {
+  margin-right: 8px;
 }
 
 .social-media {
@@ -184,6 +199,7 @@ html {
   background-size: cover;
   width: 550px;
   height: 550px;
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
 }
 @media screen and (max-width: 1920px) {
   .logo-background {
@@ -227,6 +243,31 @@ html {
   width: 65px;
   height: 65px;
   box-sizing: border-box;
+}
+
+.position-arrow {
+  position: fixed;
+  transform: translate(-50%, 0);
+  transform-origin: left top;
+  bottom: 32px;
+  left: 50%;
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
+}
+
+.right-bottom {
+  position: fixed;
+  transform: translate(-50%, 0) scale(0.6);
+  transform-origin: left top;
+  bottom: 8px;
+  left: 100%;
+  margin-left: -19px;
+  margin-bottom: -19px;
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
+}
+
+.rotate-180 {
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
+  transform: rotate(180deg);
 }
 
 .centerize-arrow {

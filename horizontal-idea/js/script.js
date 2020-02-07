@@ -12,7 +12,7 @@ $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     var height = $(window).height();
     var _scale = (1 - (scroll / height)).toFixed(2);
-    var _opacity = (_scale * _scale).toFixed(2);
+    var _percent = 50;
 
     if (_scale < .30) {
         _scale = .30;
@@ -21,10 +21,22 @@ $(window).scroll(function (event) {
     $('#logo').css({
         "transform": "scale(" + _scale + ") translate(-50%, 0)"
     });
-    $('#arrow-down').css({
-        "opacity": _opacity
-    });
 
-    console.log(_scale)
-    console.log(_scale * _scale)
+    if (scroll > 0) {
+        $('#arrow-href').attr("href","#first-section");
+        $('#arrow').css({
+            transition: "1s",
+            transform: "rotate(180deg)"
+        });
+        $('#arrow-down').addClass("right-bottom");
+    } else {
+        $('#arrow-href').attr("href","#second-section");
+        $('#arrow').css({
+            transition: "1s",
+            transform: "rotate(0deg)"
+        });
+        $('#arrow-down').removeClass("right-bottom");
+    }
+
+    console.log(scroll)
 });

@@ -89,9 +89,15 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   flex-direction: column;
 }
 
-.fixed-top-left {
+.fixed-top-right {
   position: fixed;
   top: 0;
+  right: 0;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 0;
   right: 0;
 }
 
@@ -122,6 +128,7 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   align-items: center;
   font-size: 10em;
   color: $gold-color;
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
   @media #{$large-width}{
     font-size: 8em;
   }
@@ -134,6 +141,14 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   @media #{$xSmall-width}{
     font-size: 2em;
   }
+}
+
+.arrow-font {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10em;
+  color: $gold-color;
 }
 
 .m-l-200 {
@@ -156,16 +171,16 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   margin-bottom: 30px;
 }
 
-.m-t-15{
-  margin-top: 15px;
+.m-t-8 {
+  margin-top: 8px;
 }
 
 .m-t--30 {
   margin-top: -30px;
 }
 
-.m-r-15 {
-  margin-right: 15px;
+.m-r-8 {
+  margin-right: 8px;
 }
 
 .social-media {
@@ -196,6 +211,7 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   background-size: cover;
   width: 550px;
   height: 550px;
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
   @media #{$xxLarge-width}{
     width: 500px;
     height: 500px;
@@ -230,7 +246,28 @@ $xxLarge-width: "screen and (max-width: 1920px)";
 }
 
 .position-arrow {
+  position: fixed;
+  transform: translate(-50%, 0);
+  transform-origin: left top;
+  bottom: 32px;
+  left: 50%;
+  transition: 1s cubic-bezier(.75,.17,.54,.69);
+}
 
+.right-bottom {
+  position: fixed;
+  transform: translate(-50%, 0) scale(.6);
+  transform-origin: left top;
+  bottom: 8px;
+  left: 100%;
+  margin-left: -19px;
+  margin-bottom: -19px;
+  transition: 1s cubic-bezier(.75,.17,.54,.69);
+}
+
+.rotate-180 {
+  transition: 1s cubic-bezier(.75,.17,.54,.69);
+  transform: rotate(180deg);
 }
 
 .centerize-arrow {
