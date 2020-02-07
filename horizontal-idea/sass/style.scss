@@ -175,12 +175,20 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   margin-top: 8px;
 }
 
+.m-t-80 {
+  margin-top: 80px;
+}
+
 .m-t--30 {
   margin-top: -30px;
 }
 
 .m-r-8 {
   margin-right: 8px;
+}
+
+.w-100{
+  width: 100%;
 }
 
 .social-media {
@@ -251,7 +259,7 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   transform-origin: left top;
   bottom: 32px;
   left: 50%;
-  transition: 1s cubic-bezier(.75,.17,.54,.69);
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
 }
 
 .right-bottom {
@@ -262,11 +270,11 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   left: 100%;
   margin-left: -19px;
   margin-bottom: -19px;
-  transition: 1s cubic-bezier(.75,.17,.54,.69);
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
 }
 
 .rotate-180 {
-  transition: 1s cubic-bezier(.75,.17,.54,.69);
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
   transform: rotate(180deg);
 }
 
@@ -284,6 +292,44 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   transform: translateY(0);
   will-change: transform;
   animation: MoveUpDown 1s cubic-bezier(1, 0.66, 0, 0.24) infinite;
+}
+
+.websites-rotator {
+
+}
+
+.website-element {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 400px;
+  filter: sepia(70%);
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
+  animation: MoveUpDownWebsites 5s linear infinite;
+}
+
+.website-element:hover {
+  filter: sepia(0);
+  transition: 1s cubic-bezier(.75, .17, .54, .69);
+}
+
+.element-1 {
+  background-image: url("../img/web/ekomar-layout.jpg");
+  animation-delay: 1s;
+}
+
+.element-2 {
+  background-image: url("../img/web/bustaxi-layout.png");
+  animation-delay: 500ms;
+}
+
+.element-3 {
+  background-image: url("../img/web/rajdykonne-layout.jpg");
+}
+
+.element-4 {
+  background-image: url("../img/web/tpr-layout.png");
+  animation-delay: 2s;
 }
 
 .rotate-border:before {
@@ -315,6 +361,16 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   }
   50% {
     transform: translateY(5px);
+  }
+}
+
+@keyframes MoveUpDownWebsites {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
 

@@ -163,12 +163,20 @@ html {
   margin-top: 8px;
 }
 
+.m-t-80 {
+  margin-top: 80px;
+}
+
 .m-t--30 {
   margin-top: -30px;
 }
 
 .m-r-8 {
   margin-right: 8px;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .social-media {
@@ -286,6 +294,40 @@ html {
   animation: MoveUpDown 1s cubic-bezier(1, 0.66, 0, 0.24) infinite;
 }
 
+.website-element {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 400px;
+  filter: sepia(70%);
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
+  animation: MoveUpDownWebsites 5s linear infinite;
+}
+
+.website-element:hover {
+  filter: sepia(0);
+  transition: 1s cubic-bezier(0.75, 0.17, 0.54, 0.69);
+}
+
+.element-1 {
+  background-image: url("../img/web/ekomar-layout.jpg");
+  animation-delay: 1s;
+}
+
+.element-2 {
+  background-image: url("../img/web/bustaxi-layout.png");
+  animation-delay: 500ms;
+}
+
+.element-3 {
+  background-image: url("../img/web/rajdykonne-layout.jpg");
+}
+
+.element-4 {
+  background-image: url("../img/web/tpr-layout.png");
+  animation-delay: 2s;
+}
+
 .rotate-border:before {
   content: "";
   position: absolute;
@@ -314,6 +356,14 @@ html {
   }
   50% {
     transform: translateY(5px);
+  }
+}
+@keyframes MoveUpDownWebsites {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
 @keyframes Rotate {
