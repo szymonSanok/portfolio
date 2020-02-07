@@ -6,26 +6,41 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <script src="https://kit.fontawesome.com/96a3bf8f6c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 
-<div class="d-flex flex-direction-column background-gradient h-100 justify-content-center">
-    <div class="d-flex justify-content-center">
-        <div class="logo-background"></div>
-    </div>
-    <div class="background-text justify-content-center">
-        <h2 style="display: none" class="font-aliens letter-space-0_5 m-l-200">kulikowski</h2>
-        <h2 class="portfolio">portfolio</h2>
-        <div class="font-size-_3 m-t-60 round-border centerize-arrow rotate-border">
-            <i class="fas fa-angle-double-down move-up-down rotate-rev"></i>
-        </div>
+<div class="fixed-top-left d-flex social-media m-t-15">
+    <div class="m-r-15"><i class="fab fa-facebook"></i></div>
+    <div class="m-r-15"><i class="fab fa-linkedin"></i></div>
+    <div class="m-r-15"><i class="fab fa-instagram"></i></div>
+</div>
 
+<div id="first-section" class="d-flex flex-direction-column background-gradient-black h-100vh justify-content-end">
+    <div id="logo" class="d-flex flex-direction-column align-items-center justify-content-center scalable-logo">
+        <div class="logo-background"></div>
+        <div class="background-text justify-content-center">
+            <h2 style="display: none" class="font-aliens letter-space-0_5 m-l-200">kulikowski</h2>
+            <h2 class="portfolio">portfolio</h2>
+        </div>
+    </div>
+
+    <div id="arrow-down" class="d-flex justify-content-center position-arrow m-b-30">
+        <a href="#second-section">
+            <div class="background-text round-border centerize-arrow rotate-border justify-content-center">
+                <i class="fas fa-angle-double-down move-up-down rotate-rev font-size-_3"></i>
+            </div>
+        </a>
     </div>
 </div>
 
-<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+<div id="second-section" class="h-100vh background-gradient-green">
+
+</div>
+
+
 <!--<script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>-->
-<!--<script type="text/javascript" src="js/script.js"></script>-->
 
 </body>
 </html>

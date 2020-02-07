@@ -2,22 +2,27 @@
   font-family: aliens;
   src: url(../assets/aliens.ttf);
 }
+
 @font-face {
   font-family: fat;
   src: url(../assets/bigjohn.otf);
 }
+
 @font-face {
   font-family: slim;
   src: url(../assets/slimjoe.otf);
 }
+
 @font-face {
   font-family: regular;
   src: url(../assets/kelson.otf);
 }
+
 @font-face {
   font-family: anders;
   src: url(../assets/anders.ttf);
 }
+
 html, body {
   height: 100%;
 }
@@ -27,7 +32,22 @@ html {
 }
 
 /** VARIABLES--COLOURS **/
+$gold-color: #ffe08a;
+$background-gradient-black-light: rgba(62, 62, 62, 1);
+$background-gradient-black-dark: rgba(30, 30, 30, 1);
+$background-gradient-green-light: rgba(50, 80, 90, 1);
+$background-gradient-green-dark: rgba(31, 48, 53, 1);
+
 /** VARIABLES--SCREEN SIZE **/
+
+$xSmall-width: "screen and (max-width: 320px)";
+$small-width: "screen and (max-width: 640px)";
+$medium-width: "screen and (max-width: 768px)";
+$large-width: "screen and (max-width: 1024px)";
+$xLarge-width: "screen and (max-width: 1366px)";
+$xxLarge-width: "screen and (max-width: 1920px)";
+
+
 .h-100 {
   height: 100%;
 }
@@ -42,7 +62,7 @@ html {
 }
 
 .letter-space-0_5 {
-  letter-spacing: 0.5em;
+  letter-spacing: .5em;
 }
 
 .d-flex {
@@ -76,13 +96,13 @@ html {
 }
 
 .background-gradient-black {
-  background: #1e1e1e;
-  background: linear-gradient(0deg, #1e1e1e 0%, #3e3e3e 100%);
+  background: $background-gradient-black-dark;
+  background: linear-gradient(0deg, $background-gradient-black-dark 0%, $background-gradient-black-light 100%);
 }
 
 .background-gradient-green {
-  background: #1f3035;
-  background: linear-gradient(0deg, #32505a 0%, #1f3035 100%);
+  background: $background-gradient-green-dark;
+  background: linear-gradient(0deg, $background-gradient-green-light 0%, $background-gradient-green-dark 100%);
 }
 
 .scroll {
@@ -92,7 +112,7 @@ html {
 }
 
 .font-size-_3 {
-  font-size: 0.3em;
+  font-size: .3em;
   font-weight: 100;
 }
 
@@ -101,25 +121,17 @@ html {
   flex-direction: column;
   align-items: center;
   font-size: 10em;
-  color: #ffe08a;
-}
-@media screen and (max-width: 1024px) {
-  .background-text {
+  color: $gold-color;
+  @media #{$large-width}{
     font-size: 8em;
   }
-}
-@media screen and (max-width: 768px) {
-  .background-text {
+  @media #{$medium-width}{
     font-size: 6em;
   }
-}
-@media screen and (max-width: 640px) {
-  .background-text {
+  @media #{$small-width}{
     font-size: 4em;
   }
-}
-@media screen and (max-width: 320px) {
-  .background-text {
+  @media #{$xSmall-width}{
     font-size: 2em;
   }
 }
@@ -144,7 +156,7 @@ html {
   margin-bottom: 30px;
 }
 
-.m-t-15 {
+.m-t-15{
   margin-top: 15px;
 }
 
@@ -157,7 +169,7 @@ html {
 }
 
 .social-media {
-  color: #ffe08a;
+  color: $gold-color;
   font-size: 1.8em;
 }
 
@@ -176,7 +188,7 @@ html {
 .portfolio {
   font-family: anders, serif;
   font-weight: normal;
-  font-size: 0.5em;
+  font-size: .5em;
 }
 
 .logo-background {
@@ -184,39 +196,27 @@ html {
   background-size: cover;
   width: 550px;
   height: 550px;
-}
-@media screen and (max-width: 1920px) {
-  .logo-background {
+  @media #{$xxLarge-width}{
     width: 500px;
     height: 500px;
   }
-}
-@media screen and (max-width: 1366px) {
-  .logo-background {
+  @media #{$xLarge-width}{
     width: 450px;
     height: 450px;
   }
-}
-@media screen and (max-width: 1024px) {
-  .logo-background {
+  @media #{$large-width}{
     width: 350px;
     height: 350px;
   }
-}
-@media screen and (max-width: 768px) {
-  .logo-background {
+  @media #{$medium-width}{
     width: 300px;
     height: 300px;
   }
-}
-@media screen and (max-width: 640px) {
-  .logo-background {
+  @media #{$small-width}{
     width: 250px;
     height: 250px;
   }
-}
-@media screen and (max-width: 320px) {
-  .logo-background {
+  @media #{$xSmall-width}{
     width: 200px;
     height: 200px;
   }
@@ -227,6 +227,10 @@ html {
   width: 65px;
   height: 65px;
   box-sizing: border-box;
+}
+
+.position-arrow {
+
 }
 
 .centerize-arrow {
@@ -252,7 +256,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  border: #ffe08a dashed thin;
+  border: $gold-color dashed thin;
   border-radius: 70px;
   box-sizing: border-box;
   animation: Rotate 10s linear infinite;
@@ -264,10 +268,11 @@ html {
 }
 
 .translate-smaller {
-  transform: scale(0.3);
+  transform: scale(.3);
 }
 
 @keyframes MoveUpDown {
+
   0%, 100% {
     transform: translateY(0);
   }
@@ -275,6 +280,7 @@ html {
     transform: translateY(5px);
   }
 }
+
 @keyframes Rotate {
   0% {
     transform: rotate(0deg);
@@ -283,6 +289,7 @@ html {
     transform: rotate(180deg);
   }
 }
+
 @keyframes RotateRev {
   0% {
     transform: rotate(180deg);
@@ -291,5 +298,3 @@ html {
     transform: rotate(0deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
