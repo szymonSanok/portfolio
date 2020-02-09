@@ -38,5 +38,10 @@ $(window).scroll(function (event) {
         $('#arrow-down').removeClass("right-bottom");
     }
 
-    console.log(scroll)
+    if(scroll>=height){
+        $('.website-element').each(function () {
+            console.log("add to element")
+            $(this).addClass('slide-in-left')
+        })
+    }
 });

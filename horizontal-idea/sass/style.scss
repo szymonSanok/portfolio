@@ -187,7 +187,7 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   margin-right: 8px;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
@@ -255,6 +255,7 @@ $xxLarge-width: "screen and (max-width: 1920px)";
 
 .position-arrow {
   position: fixed;
+  z-index: 10;
   transform: translate(-50%, 0);
   transform-origin: left top;
   bottom: 32px;
@@ -295,7 +296,12 @@ $xxLarge-width: "screen and (max-width: 1920px)";
 }
 
 .websites-rotator {
+  position: absolute;
+}
 
+.websites-rotator-fixed {
+  position: relative;
+  flex-direction: row-reverse;
 }
 
 .website-element {
@@ -306,6 +312,9 @@ $xxLarge-width: "screen and (max-width: 1920px)";
   filter: sepia(70%);
   transition: 1s cubic-bezier(.75, .17, .54, .69);
   animation: MoveUpDownWebsites 5s linear infinite;
+  -webkit-box-shadow: 0 0 38px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 38px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 38px 2px rgba(0, 0, 0, 0.75);
 }
 
 .website-element:hover {
@@ -316,20 +325,29 @@ $xxLarge-width: "screen and (max-width: 1920px)";
 .element-1 {
   background-image: url("../img/web/ekomar-layout.jpg");
   animation-delay: 1s;
+  margin-left: -9000px;
 }
 
 .element-2 {
   background-image: url("../img/web/bustaxi-layout.png");
   animation-delay: 500ms;
+  margin-left: -6000px;
 }
 
 .element-3 {
   background-image: url("../img/web/rajdykonne-layout.jpg");
+  margin-left: -4000px;
 }
 
 .element-4 {
   background-image: url("../img/web/tpr-layout.png");
   animation-delay: 2s;
+  margin-left: -2000px;
+}
+
+.slide-in-left{
+  margin-left: 0;
+  transition: 1s cubic-bezier(.42,0,1,1) !important;
 }
 
 .rotate-border:before {
