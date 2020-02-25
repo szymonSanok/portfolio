@@ -12,9 +12,9 @@
 <body>
 
 <div class="fixed-top-right d-flex social-media m-t-8">
-    <div class="m-r-8"><i class="fab fa-facebook"></i></div>
-    <div class="m-r-8"><i class="fab fa-linkedin"></i></div>
-    <div class="m-r-8"><i class="fab fa-instagram"></i></div>
+    <div class="m-r-8 neumorphic-shadow-social"><i class="fab fa-facebook-square"></i></div>
+    <div class="m-r-8 neumorphic-shadow-social"><i class="fab fa-linkedin"></i></div>
+    <div class="neumorphic-shadow-social"><i class="fab fa-instagram"></i></div>
 </div>
 
 <div id="first-section" class="d-flex flex-direction-column background-gradient-black h-100vh justify-content-end">
@@ -30,7 +30,7 @@
     <div id="arrow-down" class="d-flex justify-content-center position-arrow">
         <a id="arrow-href" href="#second-section">
             <div class="arrow-font round-border centerize-arrow rotate-border justify-content-center">
-                <i id="arrow" class="fas fa-angle-double-down move-up-down rotate-rev font-size-_3"></i>
+                <i id="arrow" class="fas fa-angle-double-down  rotate-rev font-size-_3"></i>
             </div>
         </a>
     </div>
@@ -38,17 +38,31 @@
 
 <div id="second-section" class="h-100vh background-gradient-green d-flex align-items-center">
     <div class="websites-rotator d-flex m-t-80 justify-content-around w-100">
-        <div class="website-element element-1"></div>
+        <div class="website-element element-1 neumorphic-shadow"></div>
         <div class="website-element element-2"></div>
         <div class="website-element element-3"></div>
         <div class="website-element element-4"></div>
     </div>
-<!--    <div class="d-flex websites-rotator-fixed  m-t-80 justify-content-around w-100">-->
-<!--        <div class="website-element element-1"></div>-->
-<!--        <div class="website-element element-2"></div>-->
-<!--        <div class="website-element element-3"></div>-->
-<!--        <div class="website-element element-4"></div>-->
-<!--    </div>-->
+    <div class="d-flex websites-rotator-fixed justify-content-around align-items-center w-100 fit-whole-screen">
+        <div class="button-back">
+            <div class="position-arrow-back">
+                <a href="#second-section">
+                    <div class="arrow-font round-border-back centerize-arrow rotate-border justify-content-center">
+                        <i class="fas fa-angle-double-left move-left-right rotate-rev font-size-_3"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="websites-text">
+            <p class="websites-text-size">
+                Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+            </p>
+        </div>
+        <div class="website-element-one scale-website-element element-1-big"></div>
+        <div class="website-element-one scale-website-element element-2-big display-none"></div>
+        <div class="website-element-one scale-website-element element-3-big display-none"></div>
+        <div class="website-element-one scale-website-element element-4-big display-none"></div>
+    </div>
 </div>
 
 
