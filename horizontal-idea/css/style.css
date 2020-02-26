@@ -87,6 +87,10 @@ html {
   box-shadow: #000000 2px 2px 4px, #4d4d4d -2px -2px 4px;
 }
 
+.neumorphic-shadow {
+  box-shadow: #000000 2px 2px 4px, #4d4d4d -2px -2px 4px;
+}
+
 .background-gradient-black {
   background: #1e1e1e;
   background: linear-gradient(0deg, #1e1e1e 0%, #3e3e3e 100%);
@@ -193,6 +197,11 @@ html {
   opacity: 0;
 }
 
+.clear-button {
+  background: none;
+  border: none;
+}
+
 .social-media {
   padding: 5px;
   margin: 25px;
@@ -287,7 +296,7 @@ html {
 
 .position-arrow {
   position: fixed;
-  z-index: 10;
+  z-index: 0;
   transform: translate(-50%, 0);
   transform-origin: left top;
   bottom: 32px;
@@ -366,7 +375,7 @@ html {
 .website-element {
   background-size: cover;
   background-repeat: no-repeat;
-  width: 300px;
+  width: 250px;
   height: 400px;
   filter: sepia(70%);
   margin-right: 10%;
@@ -385,7 +394,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   width: 300px;
-  height: 400px;
+  height: 100%;
   filter: sepia(70%);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -401,43 +410,23 @@ html {
 }
 
 .element-1 {
-  background-image: url("../img/web/ekomar-layout.jpg");
   animation-delay: 1s;
   margin-left: -9000px;
 }
 
 .element-2 {
-  background-image: url("../img/web/bustaxi-layout.png");
   animation-delay: 500ms;
   margin-left: -6000px;
   transform: scale(1.25);
 }
 
 .element-3 {
-  background-image: url("../img/web/rajdykonne-layout.jpg");
   margin-left: -4000px;
 }
 
 .element-4 {
-  background-image: url("../img/web/tpr-layout.png");
   animation-delay: 2s;
   margin-left: -2000px;
-}
-
-.element-1-big {
-  background-image: url("../img/web/ekomar-layout.jpg");
-}
-
-.element-2-big {
-  background-image: url("../img/web/bustaxi-layout.png");
-}
-
-.element-3-big {
-  background-image: url("../img/web/rajdykonne-layout.jpg");
-}
-
-.element-4-big {
-  background-image: url("../img/web/tpr-layout.png");
 }
 
 .slide-in-left {
