@@ -24,18 +24,24 @@ $(window).scroll(function (event) {
 
     if (scroll > 0) {
         $('#arrow-href').attr("href", "#first-section");
+        $('#arrow-down').addClass("right-bottom");
+        //    UP
+        $('#arrow-href-up').attr("href", "#first-section");
         $('#arrow').css({
             transition: "1s",
             transform: "rotate(180deg)"
         });
-        $('#arrow-down').addClass("right-bottom");
+        $('#arrow-up').addClass("right-bottom-up");
     } else {
         $('#arrow-href').attr("href", "#second-section");
+        $('#arrow-down').removeClass("right-bottom");
+        //    UP
+        $('#arrow-href-up').attr("href", "#second-section");
         $('#arrow').css({
             transition: "1s",
             transform: "rotate(0deg)"
         });
-        $('#arrow-down').removeClass("right-bottom");
+        $('#arrow-up').removeClass("right-bottom-up");
     }
 
     if (scroll >= height) {
@@ -45,27 +51,139 @@ $(window).scroll(function (event) {
         })
     }
 });
-
 $(document).ready(function () {
-    $('#button-back').on('click', function () {
-        $('#one-site-display').addClass("display-none");
-        $('.website-element-one').addClass("display-none");
-    });
-    $('.element-1').on('click', function () {
-        $('#one-site-display').removeClass("display-none");
-        $('.element-1-big').removeClass("display-none");
-    });
-    $('.element-2').on('click', function () {
-        $('#one-site-display').removeClass("display-none");
-        $('.element-2-big').removeClass("display-none");
-    });
-    $('.element-3').on('click', function () {
-        $('#one-site-display').removeClass("display-none");
-        $('.element-3-big').removeClass("display-none");
-    });
-    $('.element-4').on('click', function () {
-        $('#one-site-display').removeClass("display-none");
-        $('.element-4-big').removeClass("display-none");
-    });
+    $('.autoplay').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    })
 });
 
+function nextSection() {
+    var url = window.location.href;
+    var id = url.substring(url.lastIndexOf('#') + 1);
+    var sectionList = $("div[id$='-section']").map(function () {
+        return this.id
+    });
+    sectionList = sectionList.toArray();
+    var actualSectionId = sectionList.indexOf(id);
+    if (actualSectionId === -1) {
+        console.log(sectionList[0]);
+        $("#arrow-href-up").attr("href", "#" + sectionList[1]);
+        $("#arrow-href-down").attr("href", "#" + sectionList[1]);
+    } else {
+        console.log(sectionList[actualSectionId + 1]);
+        $("#arrow-href-up").attr("href", "#" + sectionList[actualSectionId - 1]);
+        $("#arrow-href-down").attr("href", "#" + sectionList[actualSectionId + 1]);
+    }
+}
+
+function prevSection() {
+    var url = window.location.href;
+    var id = url.substring(url.lastIndexOf('#') + 1);
+    var sectionList = $("div[id$='-section']").map(function () {
+        return this.id
+    });
+    sectionList = sectionList.toArray();
+    var actualSectionId = sectionList.indexOf(id);
+    if (actualSectionId === -1) {
+        console.log(sectionList[0]);
+        $("#arrow-href-up").attr("href", "#" + sectionList[1]);
+        $("#arrow-href-down").attr("href", "#" + sectionList[1]);
+    } else {
+        console.log(sectionList[actualSectionId + 1]);
+        $("#arrow-href-up").attr("href", "#" + sectionList[actualSectionId - 1]);
+        $("#arrow-href-down").attr("href", "#" + sectionList[actualSectionId + 1]);
+    }
+}
+
+function openFullscreen(websiteId) {
+    $('#one-site-display')
+        .removeClass("visibility-none")
+        .addClass("visibility-visible");
+    $('.element-' + websiteId + '-big')
+        .removeClass("display-none")
+        .removeClass("visibility-none")
+        .addClass("visibility-visible");
+}
+
+function closeFullscreen() {
+    $('#one-site-display')
+        .addClass("visibility-none")
+        .removeClass("visibility-visible");
+    $('.website-element-one')
+        .addClass("display-none")
+        .addClass("visibility-none")
+        .removeClass("visibility-visible");
+}
+
+var logoId = 0;
+
+function logoLightboxOpen(logoId) {
+    this.logoId = logoId
+    $('.logo-thumbnail-lightbox')
+        .addClass("visibility-visible")
+        .removeClass("visibility-none");
+    $('.logo-thumbnail-big-' + logoId)
+        .addClass("visibility-visible")
+        .removeClass("display-none")
+        .removeClass("visibility-none");
+}
+
+
+function logoLightboxClose() {
+    $('.logo-thumbnail-lightbox')
+        .addClass("visibility-none")
+        .removeClass("visibility-visible");
+    $('.logo-thumbnail-big')
+        .addClass("visibility-none")
+        .addClass("display-none")
+        .removeClass("visibility-visible");
+}
+
+function logoLightboxNext() {
+    $('.logo-thumbnail-big-' + this.logoId)
+        .addClass("visibility-none")
+        .addClass("display-none")
+        .removeClass("visibility-visible");
+    if (this.logoId >= $('.logo-thumbnail-big').length) {
+        this.logoId = 1
+    } else {
+        this.logoId += 1;
+    }
+    $('.logo-thumbnail-big-' + this.logoId)
+        .addClass("visibility-visible")
+        .removeClass("display-none")
+        .removeClass("visibility-none");
+}
+
+function logoLightboxPrev() {
+    $('.logo-thumbnail-big-' + this.logoId)
+        .addClass("visibility-none")
+        .addClass("display-none")
+        .removeClass("visibility-visible");
+    if (this.logoId <= 1) {
+        this.logoId = $('.logo-thumbnail-big').length
+    } else {
+        this.logoId -= 1;
+    }
+    $('.logo-thumbnail-big-' + this.logoId)
+        .addClass("visibility-visible")
+        .removeClass("display-none")
+        .removeClass("visibility-none");
+}
