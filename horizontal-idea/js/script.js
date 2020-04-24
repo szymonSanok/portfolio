@@ -51,11 +51,12 @@ $(window).scroll(function (event) {
         })
     }
 });
+
 $(document).ready(function () {
     $('.autoplay').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         responsive: [
             {
@@ -68,6 +69,12 @@ $(document).ready(function () {
                 breakpoint: 980,
                 settings: {
                     slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1
                 }
             }
         ]
@@ -187,3 +194,27 @@ function logoLightboxPrev() {
         .removeClass("display-none")
         .removeClass("visibility-none");
 }
+
+
+function onSubmit () {
+    console.log("klikam")
+
+    var xhr = new XMLHttpRequest();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var text = document.getElementById('text').value;
+    var data = new FormData();
+    data.append("name", name);
+    data.append("email", email);
+    data.append("text", text);
+    xhr.open("POST", "mailSender.php", true);
+
+    xhr.onreadystatechange = function (e) {
+        if (this.readyState === 4 && this.status === 200) {
+            $('#submit').css('display', 'none');
+            $('#done').css('display', 'flex');
+        }
+    };
+
+    xhr.send(data);
+};

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Szymon Kulikowski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -12,6 +13,21 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164019608-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164019608-1');
+    </script>
+
 
 </head>
 <body>
@@ -25,11 +41,11 @@
 <div id="first-section" class="d-flex flex-direction-column background-gradient-black h-100vh justify-content-end">
     <a href="#first-section">
         <div id="logo" class="d-flex flex-direction-column align-items-center justify-content-center scalable-logo">
-            <div class="logo-background"></div>
-            <div class="background-text justify-content-center">
-                <h2 style="display: none" class="font-aliens letter-space-0_5 m-l-200">kulikowski</h2>
-                <h2 class="portfolio">portfolio</h2>
-            </div>
+            <!--            <div class="logo-background"></div>-->
+                        <div class="background-text justify-content-center">
+                            <h2 style="display: none" class="font-aliens letter-space-0_5 m-l-200">kulikowski</h2>
+                            <h2 class="portfolio">portfolio</h2>
+                        </div>
         </div>
     </a>
     <div id="arrow-up" class="d-flex justify-content-center position-arrow">
@@ -50,11 +66,11 @@
 
 <div id="second-section" class="h-100 d-flex justify-content-center background-gradient-green d-flex align-items-center">
     <div class="autoplay websites-rotator d-flex w-80">
-        <div onclick="openFullscreen(1)"><img class="website-element" alt="Przykładowy layout" src="img/web/ekomar-layout.jpg"></div>
-        <div onclick="openFullscreen(2)"><img class="website-element" alt="Przykładowy layout" src="img/web/bustaxi-layout.png"></div>
-        <div onclick="openFullscreen(3)"><img class="website-element" alt="Przykładowy layout" src="img/web/rajdykonne-layout.jpg"></div>
-        <div onclick="openFullscreen(4)"><img class="website-element" alt="Przykładowy layout" src="img/web/tpr-layout.png"></div>
-        <div onclick="openFullscreen(5)"><img class="website-element" alt="Przykładowy layout" src="img/web/tpr-layout.png"></div>
+        <div onclick="openFullscreen(1)" class="centerize-image"><img class="website-element" alt="Przykładowy layout" src="img/web/ekomar-layout.jpg"></div>
+        <div onclick="openFullscreen(2)" class="centerize-image"><img class="website-element" alt="Przykładowy layout" src="img/web/bustaxi-layout.png"></div>
+        <div onclick="openFullscreen(3)" class="centerize-image"><img class="website-element" alt="Przykładowy layout" src="img/web/rajdykonne-layout.jpg"></div>
+        <div onclick="openFullscreen(4)" class="centerize-image"><img class="website-element" alt="Przykładowy layout" src="img/web/tpr-layout.png"></div>
+        <div onclick="openFullscreen(5)" class="centerize-image"><img class="website-element" alt="Przykładowy layout" src="img/web/tpr-layout.png"></div>
     </div>
     <div id="one-site-display" class="visibility-none d-flex websites-rotator-fixed justify-content-around align-items-center w-100 fit-whole-screen">
         <div class="position-arrow-back">
@@ -145,30 +161,44 @@
             </div>
             <div class="other-text">
                 <p class="other-text-size">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym.
+                    Wizytówki w kowbojskim stylu
                 </p>
             </div>
         </div>
         <div class="other-group other-4">
             <div class="other-text">
                 <p class="other-text-size">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym.
+                    Wystawowa lista piw kraftowych
                 </p>
             </div>
             <div class="other-image">
                 <img src="img/others/piwa.jpg" alt="piwa"/>
             </div>
         </div>
-        <div class="other-group other-5">
-            <div class="other-image">
-                <img src="img/ads/banner.jpg" alt="kredowy-baner"/>
-            </div>
-            <div class="other-text">
-                <p class="other-text-size">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym.
-                </p>
-            </div>
-        </div>
+    </div>
+</div>
+
+<div id="fifth-section" class="h-100vh d-flex justify-content-between background-gradient-grey align-items-center">
+    <div class="">
+        <h2 class="contact-header contact-slim">napisz<br> do<br> mnie</h2>
+    </div>
+    <div class="w-100 m-t-150">
+        <form onsubmit="return false;" class="d-flex flex-direction-column align-items-center">
+            <label class="m-b-50">
+                <h3 class="contact-label">imię</h3>
+                <input class="contact-input" id="name" name="name">
+            </label>
+            <label class="m-b-50">
+                <h3 class="contact-label">email</h3>
+                <input class="contact-input" id="email" name="email" type="email">
+            </label>
+            <label class="m-b-50">
+                <h3 class="contact-label">krótka wiadomość</h3>
+                <input class="contact-input contact-text" id="text" name="text" type="text">
+            </label>
+            <button id="submit" class="contact-submit" onclick="onSubmit()">wyślij</button>
+            <div id="done" class="contact-submit-done"><i class="fas fa-check"></i> wiadomość wysłana</div>
+        </form>
     </div>
 </div>
 

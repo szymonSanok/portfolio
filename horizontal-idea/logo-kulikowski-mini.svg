@@ -1,0 +1,49 @@
+
+<html>
+
+<head>
+<style>
+    #logo-frame{
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  animation-name: logo-fram;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes logo-fram{
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+    </style>
+</head>
+
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1490106689056">
+   <path class="fil0" d="M2903 4264l0 21801c0,66 20,86 86,86l1971 0c141,0 86,-348 86,-629l-1 -3572c-2,-223 -38,-258 242,-473l1680 -1548c78,-72 121,-91 201,-171l742 -686c131,-132 243,-212 372,-343l393 -350c102,68 297,347 393,464l1566 1948c72,93 119,145 193,236l3346 4169c67,85 125,149 194,234l494 620c41,53 48,101 128,101l2458 0c123,0 63,-64 29,-110l-5373 -6776c-149,-196 -297,-380 -453,-576l-1375 -1739 3094 -2963c99,-82 136,-109 227,-201l1030 -999c93,-78 126,-99 213,-187 131,-132 278,-298 416,-413l1456 -1373c75,-76 163,-125 193,-236 -801,0 -1732,-44 -2517,-2 -198,11 -135,81 -369,260 -125,95 -199,203 -327,302 -253,196 -1104,1039 -1330,1212 -193,147 -757,713 -1005,910l-6310 5747 0 -14429c0,-131 52,-400 -86,-400l-1971 0c-66,0 -86,20 -86,86z"/>
+   <path class="fil0" id="logo-frame" d="M674 1349l0 27459c0,66 20,86 86,86l19087 0 0 -6572c-375,0 -600,-55 -600,86l0 5886 -17973 0 0 -26430 17973 0 0 17343c0,141 225,86 600,86l0 -18029 -19087 0c-66,0 -86,20 -86,85z"/>
+   <path class="fil0" d="M19132 21065c0,277 213,400 486,400 323,0 489,-460 223,-709 -258,-244 -709,-65 -709,309z"/>
+  </g>
+ </g>
+</svg>
+    
+</body>
+
+    
+</html>
+    
+
